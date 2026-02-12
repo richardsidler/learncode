@@ -1,4 +1,4 @@
-#this is a test
+# this is a test of the github/git synce and commit function
 
 import tkinter as tk
 
