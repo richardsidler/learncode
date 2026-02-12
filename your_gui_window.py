@@ -14,7 +14,7 @@ root = tk.Tk()
 root.title("Basic Interface")
 root.geometry("600x400")
 
-lablel = tk.Label(root, text="Frederic Biondi & Mr Baumgarten")
+lablel = tk.Label(root, text="Type a Label in the text box!")
 lablel.pack()
 
 entry = tk.Entry(root)
