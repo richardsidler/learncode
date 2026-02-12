@@ -1,0 +1,13 @@
+# Python virtual environments (The Sandbox)
+.venv/
+venv/
+ENV/
+
+# Python "temporary" files (The junk Python creates to run faster)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Linux system files
+.DS_Store
+.thumbs.db
