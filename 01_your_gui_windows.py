@@ -1,32 +1,33 @@
 import tkinter as tk
 
-def Process_data(event=None): # ADDED 'event=None' here
+def process_data(event=None):
     # 1. Grab the text from the entry box
-    user_text = entry.get() 
-    
+    user_text = entry.get()
+
     # 2. Change the label to show what was typed
-    lablel.config(text=f"Hello, {user_text}!")
-    
+    label.config(text=f"Hello, {user_text}!")
+
     # 3. Still print to the console for a heartbeat check
     print(f"Processed: {user_text}")
 
-    # 4. CLEAR THE BOX (The new addition)
+    # 4. Clear the box
     entry.delete(0, tk.END)
+
 
 root = tk.Tk()
 root.title("Basic Interface")
 root.geometry("600x400")
 
-lablel = tk.Label(root, text="Type a Label in the text box!")
-lablel.pack()
+label = tk.Label(root, text="Type a Label in the text box!")
+label.pack()
 
 entry = tk.Entry(root)
 entry.pack()
 
-# This is the "binding" that listens for the Enter key
-root.bind('<Return>', Process_data) # ADDED this line
+# Bind Enter to the Entry widget itself
+entry.bind('<Return>', process_data)
 
-button = tk.Button(root, text="Process", command=Process_data)
+button = tk.Button(root, text="Process", command=process_data)
 button.pack()
 
 root.mainloop()
