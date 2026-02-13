@@ -10,6 +10,9 @@ def Process_data(event=None): # ADDED 'event=None' here
     # 3. Still print to the console for a heartbeat check
     print(f"Processed: {user_text}")
 
+    # 4. CLEAR THE BOX (The new addition)
+    entry.delete(0, tk.END)
+
 root = tk.Tk()
 root.title("Basic Interface")
 root.geometry("600x400")
