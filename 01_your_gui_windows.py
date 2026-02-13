@@ -1,22 +1,29 @@
 import tkinter as tk
 
-# 1. Setup the main window (The root)
+def Process_data(event=None): # ADDED 'event=None' here
+    # 1. Grab the text from the entry box
+    user_text = entry.get() 
+    
+    # 2. Change the label to show what was typed
+    lablel.config(text=f"Hello, {user_text}!")
+    
+    # 3. Still print to the console for a heartbeat check
+    print(f"Processed: {user_text}")
+
 root = tk.Tk()
-root.title("VS Code Workflow Demo")
-root.geometry("400x200")
+root.title("Basic Interface")
+root.geometry("600x400")
 
-# 2. Add a Label (The "output")
-label = tk.Label(root, text="Waiting for interaction...", font=("Arial", 12))
-label.pack(pady=20)
+lablel = tk.Label(root, text="Type a Label in the text box!")
+lablel.pack()
 
-# 3. Define a function (The "logic")
-def on_button_click():
-    label.config(text="Signal Received! Logic is working.")
-    print("Button was pressed in the GUI.")
+entry = tk.Entry(root)
+entry.pack()
 
-# 4. Add a Button (The "input")
-button = tk.Button(root, text="Click Me", command=on_button_click)
-button.pack(pady=10)
+# This is the "binding" that listens for the Enter key
+root.bind('<Return>', Process_data) # ADDED this line
 
-# 5. Start the engine (The event loop)
+button = tk.Button(root, text="Process", command=Process_data)
+button.pack()
+
 root.mainloop()
