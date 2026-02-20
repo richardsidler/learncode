@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 Bullshit GUI Example
 
 import tkinter as tk
 
