@@ -15,7 +15,6 @@ def process_data(event=None):
     # 4. Clear the box
     entry.delete(0, tk.END)
 
-
 root = tk.Tk()
 root.title("Basic Interface")
 root.geometry("600x400")
